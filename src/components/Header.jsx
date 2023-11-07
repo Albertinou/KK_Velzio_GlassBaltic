@@ -22,12 +22,8 @@ export default function Header() {
               <li></li>
             </ul>
           </div>
-
         </div>
       </div>
     </>
-
-
-
   )
 }
