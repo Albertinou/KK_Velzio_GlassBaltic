@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import Homepage from "./Pages/Homepage"
 import News from "./Pages/News"
 import Players from "./Pages/Players"
@@ -20,6 +21,7 @@ function App() {
         <Route path='/news/:slug' element={ <SingleNews /> }/>
         <Route path='*' element={ <Error/> }/>
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
