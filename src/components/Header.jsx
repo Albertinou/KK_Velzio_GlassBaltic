@@ -10,6 +10,11 @@ export default function Header() {
             <Link to="/">
             <img className='main_logo' src="./Logo.png" alt="main logo" />
             </Link>
+            <div className="menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <ul>
               <li>
                 <NavLink to="/news">Naujienos</NavLink>

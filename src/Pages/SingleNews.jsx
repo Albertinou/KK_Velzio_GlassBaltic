@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { client } from "../client";
+import { format } from 'date-fns'
+import { Link } from 'react-router-dom';
 
 export default function SingleNews() {
-  return (
-    <div>
-        <h1>SingleNews</h1>
-    </div>
-  )
+  <>
+  <p>test</p>
+  </>
 }

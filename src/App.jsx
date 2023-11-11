@@ -11,18 +11,21 @@ import Sponsors from "./Pages/Sponsors"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path='/' exact element={ <Homepage /> }/>
-        <Route path='/news' element={ <News/> }/>
-        <Route path='/players' element={ <Players /> }/>
-        <Route path='/sponsors' element={ <Sponsors /> }/>
-        <Route path='/news/:slug' element={ <SingleNews /> }/>
-        <Route path='*' element={ <Error/> }/>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' exact element={<Homepage />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/news/:slug' element={<SingleNews />} />
+          <Route path='/players' element={<Players />} />
+          <Route path='/sponsors' element={<Sponsors />} />
+          <Route path='*' element={<Error />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
+
   )
 }
 

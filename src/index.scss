@@ -1,3 +1,14 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+// Tailwind css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Box sizing rules */
 *,
 *::before,
@@ -24,8 +35,8 @@ figure,
 blockquote,
 dl,
 dd {
+  font-family: "Oswald", sans-serif;
   margin-block-end: 0;
-  background: #FAFAFA;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -90,7 +101,14 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+
+body {
+  background: #FAFAFA;
+}
+
+
+
 
 /* CUSTOM  PROPERTIES */
 
@@ -100,8 +118,7 @@ textarea:not([rows]) {
 }
 
 .active {
-  border-bottom: 2px solid var(--main-blue-color);
-  color: var(--main-blue-color);
+  -webkit-text-fill-color: var(--main-blue-color);
 }
 
 nav {
@@ -115,6 +132,7 @@ nav {
   left: 0;
   height: 85px;
   box-shadow: 0 0 20px 0 #5d6f7d;
+  z-index: 10000;
 }
 
 .nav_container {
@@ -133,7 +151,7 @@ nav {
 
 nav ul {
   display: flex;
-  gap: 40px;
+  gap: 80px;
 }
 
 nav ul li {
@@ -149,12 +167,13 @@ nav ul li a {
   display:block;
   padding:5px 0;
   font-family:'Oswald','Open Sans';
-  font-size:18px;
+  font-size:20px;
   line-height:1;
   position:relative;
   z-index:1;
   text-align: center;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(
       to right,
@@ -184,6 +203,50 @@ nav ul li a {
     }
   }
 }
+
+.nav_container .menu {
+  display: none;
+  position: absolute;
+  top: 1.7rem;
+  right: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+
+  span {
+    height:0.4rem;
+    width: 100%;
+    background-color: var(--main-text-color);
+    border-radius: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .nav_container {
+    max-width:80%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav_container .menu {
+    display: flex;
+  }
+  .nav_container {
+    flex-direction: column;
+    align-items: start;
+  }
+  .nav_container ul {
+    // display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}
+
+
+
+
 
 
 
