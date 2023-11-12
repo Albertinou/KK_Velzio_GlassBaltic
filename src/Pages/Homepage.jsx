@@ -31,7 +31,7 @@ export default function Homepage() {
 
   }, [])
 
-  
+
 
   return (
     <>
@@ -39,7 +39,9 @@ export default function Homepage() {
       <h1 className='max-w-7xl text-3xl mx-auto pt-20 px-5'>
         NAUJIENOS
       </h1>
-      {!news ? <h2>Loading...</h2> :
+      {!news ? <h2 className='max-w-7xl text-3xl mx-auto pt-20 px-5'>
+        Loading...
+      </h2> :
         <>
           {news[0] &&
             <section className='max-w-7xl mx-auto my-20 px-5'>
