@@ -5,7 +5,7 @@ export default function Error() {
   return (
     <>
       <section className='flex items-center justify-center h-screen text-center px-5' >
-        <article>
+        <article className=' mx-auto'>
           <h1 className='text-4xl lg:text-5xl mb-10'>
             404 klaida: Jūsų ieškomas puslapis neegzistuoja arba buvo perkeltas.
           </h1>

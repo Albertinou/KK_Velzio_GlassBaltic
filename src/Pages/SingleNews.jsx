@@ -32,9 +32,9 @@ export default function SingleNews() {
 
   }, [slug])
 
-  useEffect(() => {
-    document.title = `Skaitoma: ${singleNews.title}`
-  }, [singleNews.title])
+  // useEffect(() => {
+  //   document.title = `Skaitoma: ${singleNews.title}`
+  // }, [singleNews.title])
 
   return (
     <>
