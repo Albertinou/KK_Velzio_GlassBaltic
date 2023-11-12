@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Homepage() {
 
-  const [news, SetNews] = useState([]);
+  const [news, setNews] = useState([]);
 
   useEffect(() => {
     client.fetch(
@@ -26,7 +26,7 @@ export default function Homepage() {
         "name": author -> name,
       } | order(publishedAt desc)`
     ).then((data) => {
-      SetNews(data.slice(0,3));
+      setNews(data.slice(0, 3));
     }).catch(console.error);
 
   }, [])
@@ -36,29 +36,30 @@ export default function Homepage() {
       <Hero />
       <h1 className='max-w-7xl text-3xl mx-auto pt-20 px-5'>
         NAUJIENOS
-        </h1>
-      {!news ? <h2>Loading...</h2> : <>
-        {news[0] &&
-          <section className='max-w-7xl mx-auto my-20 px-5'>
-            <article className='relative'>
-              {news[0].mainImage && <img
-                src={news[0].mainImage.asset.url}
-                alt={news[0].mainImage.alt}
-                className='h-96 w-full object-cover rounded-2xl'
-              />}
-              <div className='absolute bottom-8 left-8'>
-                <h2 className='text-4xl lg:text-5xl mb-6 text-white capitalize'>
-                  {news[0].title}
-                </h2>
-                <p className='text-slate-100 mb-8 md:w-1/2'>
-                  {`${news[0].body[0].children[0].text.substring(0, 200)}...`}
-                </p>
-                <Link to={`/news/${news[0].slug.current}`} className='bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 md:w-auto'>Skaityti</Link>
-              </div>
-            </article>
-          </section>
-        }
-      </>}
+      </h1>
+      {!news ? <h2>Loading...</h2> :
+        <>
+          {news[0] &&
+            <section className='max-w-7xl mx-auto my-20 px-5'>
+              <article className='relative'>
+                {news[0].mainImage && <img
+                  src={news[0].mainImage.asset.url}
+                  alt={news[0].mainImage.alt}
+                  className='h-96 w-full object-cover rounded-2xl'
+                />}
+                <div className='absolute bottom-8 left-8'>
+                  <h2 className='text-4xl lg:text-5xl mb-6 text-white capitalize'>
+                    {news[0].title}
+                  </h2>
+                  <p className='text-slate-100 mb-8 md:w-1/2'>
+                    {`${news[0].body[0].children[0].text.substring(0, 200)}...`}
+                  </p>
+                  <Link to={`/news/${news[0].slug.current}`} className='bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 md:w-auto'>Skaityti</Link>
+                </div>
+              </article>
+            </section>
+          }
+        </>}
 
       <section className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-5 mb-10'>
         {news.map((singleNews) => (
@@ -68,7 +69,7 @@ export default function Homepage() {
                 src={singleNews.mainImage.asset.url}
                 alt={singleNews.mainImage.alt}
                 loading="lazy"
-                className='rounded-xl md:h-72 h-96 w-full object-cover'
+                className='rounded-xl md:h-72 w-full object-cover'
               />}
             </Link>
 
