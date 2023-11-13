@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
 import { client } from "../client";
+import imageUrlBuilder from '@sanity/image-url'
 
+const builder = imageUrlBuilder(client)
 
+function urlFor(source) {
+  return builder.image(source)
+}
 
 export default function Players() {
 
@@ -43,10 +47,10 @@ export default function Players() {
             {players.map((player) => (
               <article key={player.slug.current}>
                 {player.image && <img
-                  src={player.image.asset.url}
-                  alt={player.image.alt}
+                  src={urlFor(player.image).width(1000).height(1000).url()}
+                  alt={player.name}
                   loading="lazy"
-                  className='rounded-xl md:h-72 w-full object-cover'
+                  className='rounded-xl md:h-90 w-full object-cover'
                 />}
               </article>
             ))}
