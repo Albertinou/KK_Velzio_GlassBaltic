@@ -38,27 +38,6 @@ export default function Homepage() {
 
   }, []);
 
-  const [players, setPlayers] = useState([]);
-
-  useEffect(() => {
-    client.fetch(
-      `*[_type == "player"] {
-        name,
-        slug,
-        bio,
-        image {
-          asset -> {
-            _id,
-            url
-          },
-          alt,
-        },
-      }`
-    ).then((data) => {
-      setPlayers(data);
-    }).catch(console.error);
-
-  }, []);
 
   return (
     <>
@@ -75,8 +54,8 @@ export default function Homepage() {
             <section className='max-w-7xl mx-auto my-20 px-5'>
               <article className='relative'>
                 {news[0].mainImage && <img
-                  src={news[0].mainImage.asset.url}
-                  alt={news[0].mainImage.alt}
+                  src={urlFor(news[0].mainImage).url()}
+                  alt={news[0].title}
                   className='h-96 w-full object-cover rounded-2xl'
                 />}
                 <div className='absolute bottom-8 left-8'>
