@@ -114,7 +114,7 @@ export default function Homepage() {
 
       <PlayerSlider />
 
-       {/* ------------Zaideju slideris----------- */}
+       {/* ------------Varzybu grafikas----------- */}
 
        <Schedule />
 

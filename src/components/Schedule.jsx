@@ -10,7 +10,7 @@ function urlFor(source) {
 
 export default function Schedule() {
 
-    const [news, SetNews] = useState([]);
+    const [schedule, SetSchedule] = useState([]);
 
     useEffect(() => {
         client.fetch(
@@ -46,7 +46,7 @@ export default function Schedule() {
       } | order(publishedAt asc)`
 
         ).then((data) => {
-            SetNews(data);
+            SetSchedule(data.slice(0, 3));
         }).catch(console.error);
 
     }, [])
@@ -57,7 +57,7 @@ export default function Schedule() {
                 TVARKARAŠTIS
             </h1>
             <section className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-5 mb-10'>
-                {news.map((game) => (
+                {schedule.map((game) => (
                     <article key={game.slug.current} className='border border-blue-700 rounded-xl flex bg-white align-middle justify-between'>
 
                         <div className=' p-2 flex justify-between items-center w-full'>
