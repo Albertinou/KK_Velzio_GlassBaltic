@@ -5,6 +5,7 @@ import { format } from 'date-fns'
 import { Link } from 'react-router-dom';
 import imageUrlBuilder from '@sanity/image-url';
 import PlayerSlider from '../components/PlayerSlider';
+import Schedule from '../components/Schedule';
 
 const builder = imageUrlBuilder(client)
 
@@ -112,6 +113,10 @@ export default function Homepage() {
       {/* ------------Zaideju slideris----------- */}
 
       <PlayerSlider />
+
+       {/* ------------Zaideju slideris----------- */}
+
+       <Schedule />
 
     </>
   )
