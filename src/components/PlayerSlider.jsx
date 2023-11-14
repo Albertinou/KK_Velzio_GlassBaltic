@@ -33,6 +33,8 @@ export default function PlayerSlider() {
             url
           },
           alt,
+          crop,
+          hotspot
         },
       }`
         ).then((data) => {
@@ -78,7 +80,7 @@ export default function PlayerSlider() {
                                 {players.map((player) => (
                                     <SwiperSlide key={player.slug.current}>
                                         {player.image && <img
-                                            src={urlFor(player.image).width(1000).height(1000).url()}
+                                            src={urlFor(player.image).width(1500).height(1000).url()}
                                             alt={player.name}
                                             loading="lazy"
                                             className='rounded-xl md:h-90 w-full object-cover'

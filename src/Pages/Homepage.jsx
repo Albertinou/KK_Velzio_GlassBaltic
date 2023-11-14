@@ -29,6 +29,8 @@ export default function Homepage() {
             url
           },
           alt,
+          crop,
+          hotspot
         },
         "playerName": player -> name,
       } | order(publishedAt desc)`

@@ -20,6 +20,8 @@ export default function News() {
             url
           },
           alt,
+          crop,
+          hotspot
         },
         "name": author -> name,
       } | order(publishedAt desc)`

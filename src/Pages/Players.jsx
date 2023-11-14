@@ -20,10 +20,12 @@ export default function Players() {
         bio,
         image {
           asset -> {
-            _id,
-            url
-          },
-          alt,
+          _id,
+          url
+        },
+          crop,
+          hotspot,
+          alt
         },
       }`
     ).then((data) => {
@@ -36,6 +38,7 @@ export default function Players() {
 
   return (
     <>
+
       <h1 className='max-w-7xl text-3xl mx-auto py-20 px-5'>
         KOMANDA
       </h1>
@@ -43,11 +46,12 @@ export default function Players() {
         Loading...
       </h2> :
         <>
+
           <section className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-5 mb-10'>
             {players.map((player) => (
               <article key={player.slug.current}>
                 {player.image && <img
-                  src={urlFor(player.image).width(1000).height(1000).url()}
+                  src={urlFor(player.image).fit("max").size(1000, 1000).url()}
                   alt={player.name}
                   loading="lazy"
                   className='rounded-xl md:h-90 w-full object-cover'

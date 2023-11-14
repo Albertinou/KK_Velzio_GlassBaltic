@@ -23,6 +23,8 @@ export default function SingleNews() {
             url
           },
           alt,
+          crop,
+          hotspot
         },
         "name": author -> name,
       }`
