@@ -62,10 +62,10 @@ export default function Schedule() {
 
                         <div>
                             {game.homeTeamImage && <img
-                                src={urlFor(game.homeTeamImage).fit("max").size(500, 500).url()}
+                                src={urlFor(game.homeTeamImage).fit("clip").size(500, 500).url()}
                                 alt={game.homeTeam.name}
                                 loading="lazy"
-                                className='rounded-xl md:h-40 h-40 w-40 object-cover'
+                                className='rounded-xl md:h-32 h-32 w-32 object-cover'
                             />}
 
                             <div className='py-4'>
@@ -86,10 +86,10 @@ export default function Schedule() {
 
                         <div>
                         {game.awayTeamImage && <img
-                            src={urlFor(game.awayTeamImage).fit("max").size(500, 500).url()}
+                            src={urlFor(game.awayTeamImage).fit("clip").size(500, 500).url()}
                             alt={game.awayTeam.name}
                             loading="lazy"
-                            className='rounded-xl md:h-40 h-40 w-40 object-cover'
+                            className='rounded-xl md:h-32 h-32 w-32 object-cover'
                         />}
 
                         <div className='py-4'>
