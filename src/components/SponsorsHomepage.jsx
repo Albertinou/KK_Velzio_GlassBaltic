@@ -55,7 +55,7 @@ export default function SponsorsHomepage() {
                   src={urlFor(sponsor.image).url()}
                   alt={sponsor.name}
                   loading="lazy"
-                  className='rounded-xl object-contain md:h-80'
+                  className='rounded-xl object-contain h-32'
                 />}
               </article>
             ))}
