@@ -2,8 +2,12 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div>
-        <h3>Footer</h3>
-    </div>
+    <>
+      <section className=' pt-10 w-full'>
+        <div className=' h-72 w-full bg-[#014582]'>
+
+        </div>
+      </section>
+    </>
   )
 }
