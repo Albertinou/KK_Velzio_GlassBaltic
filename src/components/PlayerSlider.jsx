@@ -82,7 +82,7 @@ export default function PlayerSlider() {
                                         {player.image && <img
                                             src={urlFor(player.image).width(1500).height(1000).url()}
                                             alt={player.name}
-                                            loading="lazy"
+                                            // loading="lazy"
                                             className='rounded-xl md:h-90 w-full object-cover'
                                         />}
                                     </SwiperSlide>
