@@ -53,7 +53,7 @@ export default function Players() {
                 {player.image && <img
                   src={urlFor(player.image).fit("max").size(1000, 1000).url()}
                   alt={player.name}
-                  loading="lazy"
+                  // loading="lazy"
                   className='rounded-xl md:h-90 w-full object-cover'
                 />}
               </article>

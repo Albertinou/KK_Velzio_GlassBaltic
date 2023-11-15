@@ -54,7 +54,7 @@ export default function SponsorsHomepage() {
                 {sponsor.image && <img 
                   src={urlFor(sponsor.image).url()}
                   alt={sponsor.name}
-                  loading="lazy"
+                //   loading="lazy"
                   className='rounded-xl object-contain h-32'
                 />}
               </article>

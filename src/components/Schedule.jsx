@@ -66,7 +66,7 @@ export default function Schedule() {
                                 {game.homeTeamImage && <img
                                     src={urlFor(game.homeTeamImage).fit("clip").size(500, 500).url()}
                                     alt={game.homeTeam.name}
-                                    loading="lazy"
+                                    // loading="lazy"
                                     className='rounded-xl md:h-32 h-32 w-32 object-cover'
                                 />}
 
