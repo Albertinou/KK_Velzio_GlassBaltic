@@ -109,19 +109,20 @@ export default function Homepage() {
           Skaityti visas naujienas
         </Link>
       </div>
+      
+      {/* ------------Varzybu grafikas----------- */}
 
+      <Schedule />
 
       {/* ------------Zaideju slideris----------- */}
 
       <PlayerSlider />
 
-       {/* ------------Varzybu grafikas----------- */}
 
-       <Schedule />
 
-       {/* ------------Remejai----------- */}
+      {/* ------------Remejai----------- */}
 
-       <SponsorsHomepage />
+      <SponsorsHomepage />
 
     </>
   )
