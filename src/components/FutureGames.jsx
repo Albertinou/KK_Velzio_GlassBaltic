@@ -21,7 +21,6 @@ export default function FutureGames() {
             `*[_type == "schedule"] {
         title,
         slug,
-        body,
         publishedAt,
 
         "homeTeam": komanda -> name,
