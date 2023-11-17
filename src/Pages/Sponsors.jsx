@@ -18,6 +18,7 @@ export default function Sponsors() {
         name,
         slug,
         bio,
+        sort,
         image {
           asset -> {
           _id,
@@ -27,10 +28,9 @@ export default function Sponsors() {
           hotspot,
           alt
         },
-      }`
+      } | order(sort asc)`
     ).then((data) => {
       setSponsors(data);
-      console.log(data)
     }).catch(console.error);
 
   }, [])

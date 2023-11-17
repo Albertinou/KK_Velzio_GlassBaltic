@@ -31,6 +31,11 @@ export default defineType({
       type: 'reference',
       to: {type: 'komanda'},
     }),
+    defineField({
+      name: 'result',
+      title: 'Rezultatas',
+      type: 'string',
+    }),
     // defineField({
     //   name: 'mainImage',
     //   title: 'Main image',
@@ -50,11 +55,11 @@ export default defineType({
       title: 'Varžybų laikas',
       type: 'datetime',
     }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
-    }),
+    // defineField({
+    //   name: 'body',
+    //   title: 'Body',
+    //   type: 'blockContent',
+    // }),
   ],
 
   preview: {

@@ -29,6 +29,9 @@ export default function Header() {
               <NavLink to="/players">Komanda</NavLink>
             </li>
             <li className='p-4'>
+              <NavLink to="/schedule">Tvarkaraštis</NavLink>
+            </li>
+            <li className='p-4'>
               <NavLink to="/sponsors">Rėmėjai</NavLink>
             </li>
             <li className='p-4'>

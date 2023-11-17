@@ -8,6 +8,7 @@ import SingleNews from "./Pages/SingleNews"
 import Error from "./Pages/Error"
 import Sponsors from "./Pages/Sponsors"
 import PageLayout from './components/PageLayout'
+import Schedule from './Pages/Schedule'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path='/news' element={<News />} />
             <Route path='/news/:slug' element={<SingleNews />} />
             <Route path='/players' element={<Players />} />
+            <Route path='/schedule' element={<Schedule />} />
             <Route path='/sponsors' element={<Sponsors />} />
           </Route>
           <Route path='*' element={<Error />} />
