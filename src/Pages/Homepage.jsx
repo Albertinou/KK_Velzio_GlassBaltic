@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 import { Link } from 'react-router-dom';
 import imageUrlBuilder from '@sanity/image-url';
 import PlayerSlider from '../components/PlayerSlider';
-import Schedule from '../components/Schedule';
+import ScheduleHomepage from '../components/ScheduleHomepage';
 import SponsorsHomepage from '../components/SponsorsHomepage';
 
 const builder = imageUrlBuilder(client)
@@ -112,7 +112,7 @@ export default function Homepage() {
       
       {/* ------------Varzybu grafikas----------- */}
 
-      <Schedule />
+      <ScheduleHomepage />
 
       {/* ------------Zaideju slideris----------- */}
 

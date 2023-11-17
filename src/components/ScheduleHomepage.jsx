@@ -3,13 +3,17 @@ import { client } from "../client";
 import { format } from 'date-fns'
 import imageUrlBuilder from '@sanity/image-url';
 
+
+const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
+
+
 const builder = imageUrlBuilder(client)
 function urlFor(source) {
     return builder.image(source)
 }
 
-export default function Schedule() {
-
+export default function ScheduleHomepage() {
+    
     const [schedule, SetSchedule] = useState([]);
 
     useEffect(() => {
@@ -46,22 +50,22 @@ export default function Schedule() {
       } | order(publishedAt asc)`
 
         ).then((data) => {
-            SetSchedule(data.slice(0, 3));
+            SetSchedule(data.filter(game =>(game.publishedAt > currTime)).slice(0, 3));
         }).catch(console.error);
 
-    }, [])
+    }, []);
+
+    
 
     return (
-        <>
+        <>        
             <h1 className='max-w-7xl text-3xl mx-auto px-5 py-20'>
                 TVARKARAŠTIS
             </h1>
             <section className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-5 mb-10'>
                 {schedule.map((game) => (
                     <article key={game.slug.current} className='border border-blue-700 rounded-xl flex bg-white align-middle justify-between'>
-
                         <div className=' p-2 flex justify-between items-center w-full'>
-                            
                             <div className='flex flex-col justify-center items-center'>
                                 {game.homeTeamImage && <img
                                     src={urlFor(game.homeTeamImage).fit("clip").size(500, 500).url()}
@@ -69,23 +73,19 @@ export default function Schedule() {
                                     // loading="lazy"
                                     className='rounded-xl md:h-32 h-32 w-32 object-cover'
                                 />}
-
                                 <div className='py-4'>
                                     <p className='text-sm'>
                                         {game.homeTeam}
                                     </p>
                                 </div>
-
                             </div>
 
-
-                            <div className='py-4 flex flex-col justify-center items-center'>
+                            <div className='py-4 flex flex-col justify-center items-center max-w-[80px] flex-wrap text-center'>
                                 <p>
-                                    {format(new Date(game.publishedAt), 'yyyy-MM-dd')}
+                                {format(new Date(game.publishedAt), 'yyyy-MM-dd HH:mm')}
                                 </p>
-                                <p>{format(new Date(game.publishedAt), 'HH:mm')}</p>
+                                 {/* <p>{format(new Date(game.publishedAt), 'HH:mm')}</p> */}
                             </div>
-
 
                             <div className='flex flex-col justify-center items-center'>
                                 {game.awayTeamImage && <img
@@ -102,9 +102,9 @@ export default function Schedule() {
                                 </div>
                             </div>
                         </div>
-
                     </article>
-                ))}
+                ))
+                }
             </section>
         </>
     )
