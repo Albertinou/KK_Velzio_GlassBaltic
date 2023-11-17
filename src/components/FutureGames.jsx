@@ -13,7 +13,7 @@ function urlFor(source) {
 }
 
 export default function FutureGames() {
-    
+
     const [futureGames, setFutureGames] = useState([]);
 
     useEffect(() => {
@@ -50,15 +50,15 @@ export default function FutureGames() {
       } | order(publishedAt asc)`
 
         ).then((data) => {
-            setFutureGames(data.filter(game =>(game.publishedAt > currTime)));
+            setFutureGames(data.filter(game => (game.publishedAt > currTime)));
         }).catch(console.error);
 
     }, []);
 
-    
+
 
     return (
-        <>        
+        <>
             <h1 className='max-w-7xl text-3xl mx-auto px-5 py-20'>
                 TVARKARAŠTIS
             </h1>
@@ -73,18 +73,20 @@ export default function FutureGames() {
                                     loading="lazy"
                                     className='max-w-[100px] object-contain'
                                 />}
-                                <div className='py-4'>
-                                    <p className='text-sm'>
+                                <div className='pt-4'>
+                                    <p className=' text-lg'>
                                         {game.homeTeam}
                                     </p>
                                 </div>
                             </div>
 
                             <div className='py-4 flex flex-col justify-center items-center flex-wrap text-center'>
-                                <p>
-                                {format(new Date(game.publishedAt), 'yyyy-MM-dd')}
+                                <p className='text-lg'>
+                                    {format(new Date(game.publishedAt), 'yyyy-MM-dd')}
                                 </p>
-                                <p>{format(new Date(game.publishedAt), 'HH:mm')}</p>
+                                <p className=' text-base'>
+                                    {format(new Date(game.publishedAt), 'HH:mm')}
+                                </p>
                                 <p>{game.location}</p>
                             </div>
 
@@ -96,8 +98,8 @@ export default function FutureGames() {
                                     className='max-w-[100px] object-contain'
                                 />}
 
-                                <div className='py-4'>
-                                    <p className='text-sm'>
+                                <div className='pt-4'>
+                                    <p className='text-lg'>
                                         {game.awayTeam}
                                     </p>
                                 </div>

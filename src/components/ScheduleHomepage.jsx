@@ -73,7 +73,7 @@ export default function ScheduleHomepage() {
                                     loading="lazy"
                                     className='max-w-[100px] object-contain'
                                 />}
-                                <div className='py-4'>
+                                <div className='pt-4'>
                                     <p className='text-sm'>
                                         {game.homeTeam}
                                     </p>
@@ -95,7 +95,7 @@ export default function ScheduleHomepage() {
                                     className='max-w-[100px] object-contain'
                                 />}
 
-                                <div className='py-4'>
+                                <div className='pt-4'>
                                     <p className='text-sm'>
                                         {game.awayTeam}
                                     </p>

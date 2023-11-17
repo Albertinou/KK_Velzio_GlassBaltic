@@ -73,8 +73,8 @@ export default function PastGames() {
                                     loading="lazy"
                                     className=' max-w-[100px] object-contain'
                                 />}
-                                <div className='py-4'>
-                                    <p className='text-sm'>
+                                <div className='pt-4'>
+                                    <p className='text-lg'>
                                         {game.homeTeam}
                                     </p>
                                 </div>
@@ -95,8 +95,8 @@ export default function PastGames() {
                                     className=' max-w-[100px] object-contain'
                                 />}
 
-                                <div className='py-4'>
-                                    <p className='text-sm'>
+                                <div className='pt-4'>
+                                    <p className='text-lg'>
                                         {game.awayTeam}
                                     </p>
                                 </div>

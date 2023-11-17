@@ -66,7 +66,7 @@ export default function Homepage() {
                   <h2 className='text-4xl lg:text-5xl mb-6 text-white capitalize'>
                     {news[0].title}
                   </h2>
-                  <p className='text-slate-100 mb-8 md:w-1/2'>
+                  <p className='text-slate-100 mb-8 md:w-1/2 text-xl'>
                     {`${news[0].body[0].children[0].text.substring(0, 200)}...`}
                   </p>
                   <Link to={`/news/${news[0].slug.current}`} className='bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 md:w-auto'>Skaityti</Link>
