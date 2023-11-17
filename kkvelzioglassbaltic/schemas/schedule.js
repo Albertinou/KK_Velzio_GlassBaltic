@@ -36,6 +36,11 @@ export default defineType({
       title: 'Rezultatas',
       type: 'string',
     }),
+    defineField({
+      name: 'location',
+      title: 'Varžybų vieta',
+      type: 'string',
+    }),
     // defineField({
     //   name: 'mainImage',
     //   title: 'Main image',

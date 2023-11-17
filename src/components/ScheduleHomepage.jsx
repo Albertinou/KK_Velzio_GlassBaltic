@@ -21,6 +21,7 @@ export default function ScheduleHomepage() {
             `*[_type == "schedule"] {
         title,
         slug,
+        location,
         publishedAt,
 
         "homeTeam": komanda -> name,
@@ -67,10 +68,10 @@ export default function ScheduleHomepage() {
                         <div className=' p-2 flex justify-between items-center w-full'>
                             <div className='flex flex-col justify-center items-center'>
                                 {game.homeTeamImage && <img
-                                    src={urlFor(game.homeTeamImage).fit("clip").size(500, 500).url()}
+                                    src={urlFor(game.homeTeamImage).fit("clip").size(500, 600).url()}
                                     alt={game.homeTeam.name}
-                                    // loading="lazy"
-                                    className='rounded-xl md:h-32 h-32 w-32 object-cover'
+                                    loading="lazy"
+                                    className='max-w-[100px] object-contain'
                                 />}
                                 <div className='py-4'>
                                     <p className='text-sm'>
@@ -79,19 +80,19 @@ export default function ScheduleHomepage() {
                                 </div>
                             </div>
 
-                            <div className='py-4 flex flex-col justify-center items-center max-w-[80px] flex-wrap text-center'>
+                            <div className='py-4 flex flex-col justify-center items-center flex-wrap text-center'>
                                 <p>
                                 {format(new Date(game.publishedAt), 'yyyy-MM-dd HH:mm')}
                                 </p>
-                                 {/* <p>{format(new Date(game.publishedAt), 'HH:mm')}</p> */}
+                                 <p>{game.location}</p>
                             </div>
 
                             <div className='flex flex-col justify-center items-center'>
                                 {game.awayTeamImage && <img
-                                    src={urlFor(game.awayTeamImage).fit("clip").size(500, 500).url()}
+                                    src={urlFor(game.awayTeamImage).fit("clip").size(500, 600).url()}
                                     alt={game.awayTeam.name}
                                     loading="lazy"
-                                    className='rounded-xl md:h-32 h-32 w-32 object-cover'
+                                    className='max-w-[100px] object-contain'
                                 />}
 
                                 <div className='py-4'>

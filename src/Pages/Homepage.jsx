@@ -85,7 +85,7 @@ export default function Homepage() {
               {singleNews.mainImage && <img
                 src={singleNews.mainImage.asset.url}
                 alt={singleNews.mainImage.alt}
-                // loading="lazy"
+                loading="lazy"
                 className='rounded-xl md:h-72 w-full object-cover'
               />}
             </Link>

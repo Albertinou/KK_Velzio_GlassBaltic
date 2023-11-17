@@ -65,13 +65,13 @@ export default function PastGames() {
             <section className='grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-7xl mx-auto px-5 mb-10'>
                 {pastGames.map((game) => (
                     <article key={game.slug.current} className='border border-blue-700 rounded-xl flex bg-white align-middle justify-between'>
-                        <div className=' p-2 flex justify-between items-center w-full'>
+                        <div className=' px-6 py-2 flex justify-between items-center w-full'>
                             <div className='flex flex-col justify-center items-center'>
                                 {game.homeTeamImage && <img
-                                    src={urlFor(game.homeTeamImage).fit("clip").size(500, 500).url()}
+                                    src={urlFor(game.homeTeamImage).size(500, 600).url()}
                                     alt={game.homeTeam.name}
-                                    // loading="lazy"
-                                    className='rounded-xl md:h-32 h-32 w-32 object-cover'
+                                    loading="lazy"
+                                    className=' max-w-[100px] object-contain'
                                 />}
                                 <div className='py-4'>
                                     <p className='text-sm'>
@@ -89,10 +89,10 @@ export default function PastGames() {
 
                             <div className='flex flex-col justify-center items-center'>
                                 {game.awayTeamImage && <img
-                                    src={urlFor(game.awayTeamImage).fit("clip").size(500, 500).url()}
+                                    src={urlFor(game.awayTeamImage).size(500, 600).url()}
                                     alt={game.awayTeam.name}
                                     loading="lazy"
-                                    className='rounded-xl md:h-32 h-32 w-32 object-cover'
+                                    className=' max-w-[100px] object-contain'
                                 />}
 
                                 <div className='py-4'>
