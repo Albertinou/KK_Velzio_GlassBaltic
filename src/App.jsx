@@ -1,14 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from "./components/Header"
-import Footer from "./components/Footer"
 import Homepage from "./Pages/Homepage"
 import News from "./Pages/News"
 import Players from "./Pages/Players"
 import SingleNews from "./Pages/SingleNews"
 import Error from "./Pages/Error"
 import Sponsors from "./Pages/Sponsors"
-import PageLayout from './components/PageLayout'
-import Schedule from './Pages/Schedule'
+import PageLayout from "./components/PageLayout"
+import Schedule from "./Pages/Schedule"
 
 
 function App() {
