@@ -38,7 +38,6 @@ export default function Players() {
 
   return (
     <>
-
       <h1 className='max-w-7xl text-3xl mx-auto py-20 px-5'>
         KOMANDA
       </h1>
@@ -61,9 +60,7 @@ export default function Players() {
                     <div className="absolute w-full flex place-content-center">
                       <p className="capitalize font-serif font-bold text-5xl text-center  text-white mt-10">{player.bio[0].children[0].text}</p>
                     </div>
-                    <div className="absolute w-full flex place-content-center mt-20">
-                      {/* <p className="font-sans text-center w-4/5 text-white mt-5">Collaborative effort of a group to achieve a common goal the most effective and efficient way!</p> */}
-                    </div>
+                    
                     <div className="absolute bottom-4 text-white capitalize font-serif font-bold text-3xl text-center">{player.name}</div>
                   </div>
                 </div>
@@ -71,35 +68,6 @@ export default function Players() {
             ))}
           </section>
         </>}
-
-
-
-
-
-
-
-
-      {/* <h1 className='max-w-7xl text-3xl mx-auto py-20 px-5'>
-        KOMANDA
-      </h1>
-      {!players ? <h2 className='max-w-7xl text-3xl mx-auto pt-20 px-5'>
-        Loading...
-      </h2> :
-        <>
-          <section className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-5 mb-10'>
-            {players.map((player) => (
-              <article key={player.slug.current}>
-                {player.image && <img
-                  src={urlFor(player.image).fit("max").size(1000, 1000).url()}
-                  alt={player.name}
-                  loading="lazy"
-                  className='rounded-xl md:h-90 w-full object-cover shadow-lg  shadow-gray-700 hover:shadow-2xl hover:shadow-gray-800 transition duration-500 hover:scale-105'
-                />}
-                
-              </article>
-            ))}
-          </section>
-        </>} */}
     </>
   )
 }

@@ -62,11 +62,10 @@ export default function SingleNews() {
 
 
           <div className='max-w-7xl mx-auto mb-20 py-10'>
-            <Link to="/news" className='bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 md:w-auto'>
+            <Link to="/news" className='bg-white py-2 px-8 rounded text-slate-800 tracking-wide transition-all duration-200 md:w-auto shadow-md  shadow-gray-700 hover:shadow-xl hover:shadow-gray-800  hover:scale-105'>
               Skaityti visas naujienas
             </Link>
           </div>
-
         </section>}
     </>
   )

@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <>
       <section className='w-full bg-center bg-cover'>
-        <img src="./hero_banner2.jpg" alt="hero banner" />
+        <img src="./IMG_0133.jpeg" alt="hero banner" />
       </section>
     </>
   )
