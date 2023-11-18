@@ -45,7 +45,7 @@ export default function News() {
                 src={singleNews.mainImage.asset.url}
                 alt={singleNews.mainImage.alt}
                 loading="lazy"
-                className='rounded-xl md:h-72 h-96 w-full object-cover'
+                className='rounded-xl md:h-72 h-96 w-full object-cover shadow-md  shadow-gray-700 hover:shadow-lg hover:shadow-gray-800 transition duration-500 hover:scale-105'
               />}
             </Link>
 

@@ -54,8 +54,8 @@ export default function Sponsors() {
                 {sponsor.image && <img 
                   src={urlFor(sponsor.image).url()}
                   alt={sponsor.name}
-                  // loading="lazy"
-                  className='object-contain md:h-80'
+                  loading="lazy"
+                  className='object-contain md:h-80 transition duration-500 hover:scale-125'
                 />}
               </article>
             ))}

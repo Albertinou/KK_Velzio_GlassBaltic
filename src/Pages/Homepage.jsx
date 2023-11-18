@@ -55,12 +55,12 @@ export default function Homepage() {
       </h2> :
         <>
           {news[0] &&
-            <section className='max-w-7xl mx-auto my-20 px-5'>
+            <section className='max-w-7xl mx-auto mt-10 mb-20 px-5'>
               <article className='relative'>
                 {news[0].mainImage && <img
                   src={urlFor(news[0].mainImage).url()}
                   alt={news[0].title}
-                  className='h-96 w-full object-cover rounded-2xl'
+                  className='h-96 w-full object-cover rounded-2xl shadow-md  shadow-gray-700'
                 />}
                 <div className='absolute bottom-8 left-8'>
                   <h2 className='text-4xl lg:text-5xl mb-6 text-white capitalize'>
@@ -69,7 +69,7 @@ export default function Homepage() {
                   <p className='text-slate-100 mb-8 md:w-1/2 text-xl'>
                     {`${news[0].body[0].children[0].text.substring(0, 200)}...`}
                   </p>
-                  <Link to={`/news/${news[0].slug.current}`} className='bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 md:w-auto'>Skaityti</Link>
+                  <Link to={`/news/${news[0].slug.current}`} className='bg-white py-2 px-8 rounded text-slate-800 tracking-wide transition-all duration-200 md:w-auto shadow-md  shadow-gray-700 hover:shadow-xl hover:shadow-gray-800  hover:scale-105'>Skaityti</Link>
                 </div>
               </article>
             </section>
@@ -86,7 +86,7 @@ export default function Homepage() {
                 src={singleNews.mainImage.asset.url}
                 alt={singleNews.mainImage.alt}
                 loading="lazy"
-                className='rounded-xl md:h-72 w-full object-cover'
+                className='rounded-xl md:h-72 w-full object-cover shadow-md  shadow-gray-700 hover:shadow-lg hover:shadow-gray-800 transition duration-500 hover:scale-105'
               />}
             </Link>
 
@@ -94,22 +94,25 @@ export default function Homepage() {
               <p className='text-sm'>
                 {format(new Date(singleNews.publishedAt), 'yyyy-MM-dd')}
               </p>
-              <Link to={`/news/${singleNews.slug.current}`}>
-                <h2 className='text-xl my-2'>{singleNews.title}</h2>
-                <p className='text-sm leading-relaxed'>
-                  {`${singleNews.body[0].children[0].text.substring(0, 200)}...`}
-                </p>
-              </Link>
+              <div>
+                <Link to={`/news/${singleNews.slug.current}`}>
+                  <h2 className='text-xl my-2'>{singleNews.title}</h2>
+                  <p className='text-sm leading-relaxed'>
+                    {`${singleNews.body[0].children[0].text.substring(0, 200)}...`}
+                  </p>
+                </Link>
+              </div>
+
             </div>
           </article>
         ))}
       </section>
       <div className='max-w-7xl mx-auto px-5'>
-        <Link to="/news" className='bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 md:w-auto'>
+        <Link to="/news" className='bg-white py-2 px-8 rounded text-slate-800 tracking-wide transition-all duration-200 md:w-auto shadow-md  shadow-gray-700 hover:shadow-xl hover:shadow-gray-800  hover:scale-105'>
           Skaityti visas naujienas
         </Link>
       </div>
-      
+
       {/* ------------Varzybu grafikas----------- */}
 
       <ScheduleHomepage />

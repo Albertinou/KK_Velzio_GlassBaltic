@@ -64,7 +64,7 @@ export default function PastGames() {
             </h1>
             <section className='grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-7xl mx-auto px-5 mb-10'>
                 {pastGames.map((game) => (
-                    <article key={game.slug.current} className='border border-blue-700 rounded-xl flex bg-white align-middle justify-between'>
+                    <article key={game.slug.current} className='border border-blue-700 rounded-xl flex bg-white align-middle justify-between shadow-md  shadow-gray-700 hover:shadow-xl hover:shadow-gray-800 transition duration-500 hover:scale-105'>
                         <div className=' px-6 py-2 flex justify-between items-center w-full'>
                             <div className='flex flex-col justify-center items-center'>
                                 {game.homeTeamImage && <img

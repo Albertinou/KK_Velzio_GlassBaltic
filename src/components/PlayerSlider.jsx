@@ -47,7 +47,7 @@ export default function PlayerSlider() {
 
     return (
         <>
-            <h1 className='max-w-7xl text-3xl mx-auto py-20 px-5'>
+            <h1 className='max-w-7xl text-3xl mx-auto pt-20 pb-10 px-5'>
                 KOMANDA
             </h1>
 
@@ -69,7 +69,7 @@ export default function PlayerSlider() {
                         clickable: true
                     }}
                     modules={[FreeMode, Pagination]}
-                    className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-5 mb-20'
+                    className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-5 mb-20 max-h-96'
                 >
 
                     {!players ? <h2 className='max-w-7xl text-3xl mx-auto pt-20 px-5'>
@@ -82,8 +82,8 @@ export default function PlayerSlider() {
                                         {player.image && <img
                                             src={urlFor(player.image).width(1500).height(1000).url()}
                                             alt={player.name}
-                                            // loading="lazy"
-                                            className='rounded-xl md:h-90 w-full object-cover'
+                                            loading="lazy"
+                                            className='rounded-xl  w-full object-cover shadow-2xl'
                                         />}
                                     </SwiperSlide>
                                 ))}
@@ -93,7 +93,7 @@ export default function PlayerSlider() {
                 </Swiper>
             </div>
             <div className='max-w-7xl mx-auto px-5'>
-                <Link to="/players" className='bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 md:w-auto'>
+                <Link to="/players" className='bg-white py-2 px-8 rounded text-slate-800 tracking-wide transition-all duration-200 md:w-auto shadow-md  shadow-gray-700 hover:shadow-xl hover:shadow-gray-800  hover:scale-105'>
                     Visi žaidėjai
                 </Link>
             </div>

@@ -53,8 +53,8 @@ export default function Players() {
                 {player.image && <img
                   src={urlFor(player.image).fit("max").size(1000, 1000).url()}
                   alt={player.name}
-                  // loading="lazy"
-                  className='rounded-xl md:h-90 w-full object-cover'
+                  loading="lazy"
+                  className='rounded-xl md:h-90 w-full object-cover shadow-lg  shadow-gray-700 hover:shadow-2xl hover:shadow-gray-800 transition duration-500 hover:scale-105'
                 />}
               </article>
             ))}

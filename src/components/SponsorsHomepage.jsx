@@ -40,7 +40,7 @@ export default function SponsorsHomepage() {
   return (
     <>
 
-      <h1 className='max-w-7xl text-3xl mx-auto pt-20 pb-10 px-5'>
+      <h1 className='max-w-7xl text-3xl mx-auto pt-20 pb-5 px-5'>
         RĖMĖJAI
       </h1>
       {!sponsors ? <h2 className='max-w-7xl text-3xl mx-auto pt-20 px-5'>
@@ -55,7 +55,7 @@ export default function SponsorsHomepage() {
                   src={urlFor(sponsor.image).url()}
                   alt={sponsor.name}
                 //   loading="lazy"
-                  className='object-contain h-32'
+                  className='object-contain h-32 transition duration-500 hover:scale-125'
                 />}
               </article>
             ))}
