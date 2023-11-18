@@ -51,7 +51,7 @@ export default function PlayerSlider() {
                 KOMANDA
             </h1>
             <section className="">
-                <div className="lg:mx-auto max-w-7xl mx-[1.5rem]">
+                <div className="lg:mx-auto max-w-7xl mx-[1.5rem] ">
 
                     <Swiper
                         modules={[EffectCoverflow, Pagination]}
@@ -82,7 +82,7 @@ export default function PlayerSlider() {
                                                 src={urlFor(player.image).width(1500).height(1000).url()}
                                                 alt={player.name}
                                                 loading="lazy"
-                                                className='rounded-xl  w-full object-cover'
+                                                className='rounded-xl  w-auto object-cover h-36  md:h-auto'
                                             />}
                                         </SwiperSlide>
                                     ))}

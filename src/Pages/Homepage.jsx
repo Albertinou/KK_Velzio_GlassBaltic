@@ -64,10 +64,10 @@ export default function Homepage() {
                   className='h-96 w-full object-cover rounded-2xl shadow-md  shadow-gray-700'
                 />}
                 <div className='absolute bottom-8 left-8'>
-                  <h2 className='text-4xl lg:text-5xl mb-6 text-white capitalize'>
+                  <h2 className='text-4xl lg:text-5xl mb-6 text-white capitalize drop-shadow-md'>
                     {news[0].title}
                   </h2>
-                  <p className='text-slate-100 mb-8 md:w-1/2 text-xl'>
+                  <p className='text-slate-100 mb-8 md:w-1/2 text-xl drop-shadow-sm'>
                     {`${news[0].body[0].children[0].text.substring(0, 200)}...`}
                   </p>
                   <Link to={`/news/${news[0].slug.current}`} className='bg-white py-2 px-8 rounded text-slate-800 tracking-wide transition-all duration-200 md:w-auto shadow-md  shadow-gray-700 hover:shadow-xl hover:shadow-gray-800  hover:scale-105'>Skaityti</Link>
