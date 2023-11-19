@@ -7,7 +7,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import PlayerSlider from '../components/PlayerSlider';
 import ScheduleHomepage from '../components/ScheduleHomepage';
 import SponsorsHomepage from '../components/SponsorsHomepage';
-import Parama from '../components/Parama';
+
 
 const builder = imageUrlBuilder(client)
 
@@ -118,9 +118,7 @@ export default function Homepage() {
 
       <ScheduleHomepage />
 
-      {/* ------------Paramos tekstas----------- */}
 
-      <Parama />
 
       {/* ------------Zaideju slideris----------- */}
 

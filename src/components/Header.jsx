@@ -35,6 +35,9 @@ export default function Header() {
               <NavLink to="/sponsors">Rėmėjai</NavLink>
             </li>
             <li className='p-4'>
+              <NavLink to="/parama">Parama</NavLink>
+            </li>
+            <li className='p-4'>
               <a href="https://hustlepoint.com/product-category/apranga/velzys-lt/" target="_blank">Atributika</a>
             </li>
           </ul>
@@ -56,6 +59,9 @@ export default function Header() {
               </li>
               <li className='p-4 border-b border-gray-300 flex justify-start'>
                 <NavLink to="/sponsors">Rėmėjai</NavLink>
+              </li>
+              <li className='p-4 border-b border-gray-300 flex justify-start'>
+                <NavLink to="/parama">Parama</NavLink>
               </li>
               <li className='p-4 flex justify-start'>
                 <a href="https://hustlepoint.com/product-category/apranga/velzys-lt/" target="_blank">Atributika</a>

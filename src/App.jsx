@@ -7,6 +7,7 @@ import Error from "./Pages/Error"
 import Sponsors from "./Pages/Sponsors"
 import PageLayout from "./components/PageLayout"
 import Schedule from "./Pages/Schedule"
+import Parama from "./Pages/Parama"
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path='/players' element={<Players />} />
             <Route path='/schedule' element={<Schedule />} />
             <Route path='/sponsors' element={<Sponsors />} />
+            <Route path='/parama' element={<Parama />} />
           </Route>
           <Route path='*' element={<Error />} />
         </Routes>

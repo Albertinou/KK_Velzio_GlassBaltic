@@ -3,7 +3,7 @@ import React from 'react'
 export default function Parama() {
     return (
         <>
-            <div className='  max-w-7xl mx-auto px-5 pt-10'>
+            <div className='  max-w-7xl mx-auto px-5 py-20'>
                 <div className='px-5 border border-blue-700 rounded-xl  bg-white   shadow-md  shadow-gray-700 '>
                     <p className='pt-5 text-2xl uppercase font-bold'>Prisidėkite prie krepšinio klubo Velžys skirdami 1.2% GPM</p>
                     <p className='pt-6 text-2xl'> Skirdami 1.2% paramą, Jūs prisidedate prie krepšinio klubo Velžys gyvavimo. </p>
