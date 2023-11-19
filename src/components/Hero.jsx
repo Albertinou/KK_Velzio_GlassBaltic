@@ -6,12 +6,12 @@ export default function Hero() {
     <>
       <section className="relative bg-cover bg-center bg-no-repeat">
         <img src="./IMG_0133.jpeg" alt="hero banner" />
-        <div className='absolute top-[10%] left-[50%]'>
-          <div className='flex flex-col'>
-            <div className='pb-2'>
+        <div className='absolute top-[8%] left-[5%] md:left-[37%] max-w-xs lg:max-w-2xl w-full'>
+          <div className='flex justify-between'>
+            <div>
               <a href="https://www.facebook.com/KKVelzioGlassBaltic" target="_blank" className='flex items-center'>
                 <AiFillFacebook className=' lg:text-5xl text-2xl text-white' />
-                <p className='pl-2 lg:text-3xl text-md text-white'>KK Velžio "GlassBaltic"</p>
+                <p className='pl- lg:text-3xl text-md text-white'>KK Velžio "GlassBaltic"</p>
               </a>
             </div>
             <div>

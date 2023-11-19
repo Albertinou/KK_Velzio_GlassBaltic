@@ -60,7 +60,7 @@ export default function PastGames() {
     return (
         <>        
             <h1 className='max-w-7xl text-3xl mx-auto px-5 py-20'>
-                SUŽAISTOS
+                REZULTATAI
             </h1>
             <section className='grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-7xl mx-auto px-5 mb-10'>
                 {pastGames.map((game) => (

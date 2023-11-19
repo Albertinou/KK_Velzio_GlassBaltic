@@ -64,7 +64,7 @@ export default function Homepage() {
                   className='h-96 w-full object-cover rounded-2xl shadow-md  shadow-gray-700'
                 />}
                 <div className='absolute bottom-8 left-8'>
-                  <h2 className='text-4xl lg:text-5xl mb-6 text-white capitalize drop-shadow-md'>
+                  <h2 className='text-4xl lg:text-5xl mb-6 text-white drop-shadow-md'>
                     {news[0].title}
                   </h2>
                   <p className='text-slate-100 mb-8 md:w-1/2 text-xl drop-shadow-sm'>
