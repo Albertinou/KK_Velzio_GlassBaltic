@@ -65,7 +65,7 @@ export default function ClosestGameTime() {
     return (
         <>
             <h4 className='max-w-7xl text-2xl mx-auto px-5'>
-                Laikas iki artimiausių varžybų:
+            Iki rungtynių liko:
             </h4>
             <h3 className='max-w-7xl text-3xl mx-auto pb-5 px-5'>
                 {timerDays} d. {timerHours} val. {timerMinutes} min. {timerSeconds} s.
