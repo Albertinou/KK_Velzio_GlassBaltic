@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { client } from "../client";
 import { format } from 'date-fns'
 import imageUrlBuilder from '@sanity/image-url';
+import ClosestGameTime from './ClosestGameTime';
 
 
 const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
@@ -62,6 +63,7 @@ export default function FutureGames() {
             <h1 className='max-w-7xl text-3xl mx-auto px-5 py-20'>
                 TVARKARAŠTIS
             </h1>
+            <ClosestGameTime/>
             <section className='grid grid-cols-1 gap-8 md:grid-cols-1 lg:grid-cols-1 max-w-7xl mx-auto px-5 mb-10'>
                 {futureGames.map((game) => (
                     <article key={game.slug.current} className='border border-blue-700 rounded-xl flex bg-white align-middle justify-between shadow-md  shadow-gray-700 hover:shadow-xl hover:shadow-gray-800 transition duration-500 hover:scale-105'>

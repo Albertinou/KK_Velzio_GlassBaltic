@@ -58,6 +58,7 @@ export default function ClosestGameTime() {
     useEffect(() => {
         setTimerMinutes(Math.floor(distance % (1000 * 60 * 60) / (1000 * 60)));
     }, [distance])
+    
     useEffect(() => {
         setTimerSeconds(Math.floor(distance % (1000 * 60) / 1000));
     }, [distance])
