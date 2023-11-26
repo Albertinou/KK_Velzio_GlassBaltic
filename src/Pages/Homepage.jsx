@@ -9,6 +9,7 @@ import ScheduleHomepage from '../components/ScheduleHomepage';
 import SponsorsHomepage from '../components/SponsorsHomepage';
 
 
+
 const builder = imageUrlBuilder(client)
 
 function urlFor(source) {

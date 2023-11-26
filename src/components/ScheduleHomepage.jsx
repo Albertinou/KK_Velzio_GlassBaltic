@@ -3,6 +3,7 @@ import { client } from "../client";
 import { format } from 'date-fns'
 import imageUrlBuilder from '@sanity/image-url';
 import { Link } from 'react-router-dom';
+import ClosestGameTime from '../components/ClosestGameTime';
 
 
 const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
@@ -109,6 +110,7 @@ export default function ScheduleHomepage() {
                 ))
                 }
             </section>
+            <ClosestGameTime/>
         </>
     )
 }
