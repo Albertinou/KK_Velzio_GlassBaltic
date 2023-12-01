@@ -34,16 +34,20 @@ export default function ClosestGameTime() {
         ).catch(console.error);
     }, []);
 
-    useEffect(() => {
-        setDistance(gameTime - currentTime)
-    }, [currentTime, gameTime])
+
+
+    // useEffect(() => {
+    //     setDistance(gameTime != 0 ? gameTime  - currentTime : currentTime - currentTime)
+    // }, [currentTime, gameTime])
+
+
 
     useEffect(() => {
         setGameTime(new Date(closestGameTime).getTime())
     }, [closestGameTime])
 
     useEffect(() => {
-        setDistance(gameTime - currentTime)
+        setDistance(gameTime != 0 ? gameTime  - currentTime : currentTime - currentTime)
     }, [currentTime, gameTime])
 
 
