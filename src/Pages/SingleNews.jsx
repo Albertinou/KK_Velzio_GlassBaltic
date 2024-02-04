@@ -51,13 +51,13 @@ export default function SingleNews() {
           <h1 className='text-4xl my-8 xl:text-5xl'>
             {singleNews.title}
           </h1>
-          <p className='font-bold text-sm mb-8'>
+          <p className='font-bold text-sm lg:text-xl mb-8 '>
             {singleNews.publishedAt && <>
               {format(new Date(singleNews.publishedAt), 'yyyy-MM-dd')}
             </>}
           </p>
-          <div>
-            <PortableText value={singleNews.body} />
+          <div className= "text-lg lg:text-xl mb-8">
+            <PortableText value={singleNews.body}/>
           </div>
 
 
