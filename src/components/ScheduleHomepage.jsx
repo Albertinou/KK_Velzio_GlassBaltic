@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import ClosestGameTime from '../components/ClosestGameTime';
 
 
-const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
-
+// const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
+const currTime = (new Date(Date())).toJSON();
 
 const builder = imageUrlBuilder(client)
 function urlFor(source) {
@@ -53,6 +53,7 @@ export default function ScheduleHomepage() {
 
         ).then((data) => {
             SetSchedule(data.filter(game => (game.publishedAt > currTime)).slice(0, 3));
+            
         }).catch(console.error);
 
     }, []);

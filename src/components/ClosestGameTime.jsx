@@ -2,7 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { client } from "../client";
 import { format } from 'date-fns'
 
-const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
+// const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
+
+const currTime = (new Date(Date())).toJSON();
+
+
+
+
 
 
 
@@ -26,7 +32,7 @@ export default function ClosestGameTime() {
          publishedAt,
          } | order(publishedAt asc)`
         ).then((data) => {
-            setClosestGameTime(data.filter(game => (game.publishedAt > currTime)).slice(0, 1)[0].publishedAt)
+            setClosestGameTime(data.filter(game => (game.publishedAt > currTime)).slice(0, 1)[0].publishedAt);
         }).then(
             interval = setInterval(() => {
                 setCurrentTime(new Date().getTime())

@@ -4,8 +4,8 @@ import { format } from 'date-fns'
 import imageUrlBuilder from '@sanity/image-url';
 
 
-const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
-
+// const currTime = format(new Date(Date()), 'yyyy-MM-dd HH:mm');
+const currTime = (new Date(Date())).toJSON();
 
 const builder = imageUrlBuilder(client)
 function urlFor(source) {
