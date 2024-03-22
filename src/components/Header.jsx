@@ -17,7 +17,7 @@ export default function Header() {
         <div className='flex justify-between items-center max-w-7xl w-full h-24 px-5'>
 
           <Link to="/">
-            <img className='absolute top-2 h-28 z-30' src="./Logo.png" alt="main logo" />
+            <img className='absolute top-2 h-28 z-30' src="../Logo.png" alt="main logo" />
           </Link>
 
 

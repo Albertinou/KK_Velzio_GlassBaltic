@@ -10,7 +10,7 @@ export default function Footer() {
             <div className='h-full flex items-center '>
               <div className='flex justify-between items-center w-full flex-col md:flex-row border-b border-b-stone-30 py-9'>
                 <div className='flex items-center'>
-                  <img src="./Logo_BW_2.png" alt="logo_black_white" className='w-24 pr-5' />
+                  <img src="../Logo_BW_2.png" alt="logo_black_white" className='w-24 pr-5' />
                   <div>
                     <p className=' text-lg text-stone-300'>Krepšinio klubas Velžys</p>
                     <p className=' text-lg text-stone-300'>Nevėžio g. 54-1, Velžio k., 38129, Panevėžio r.</p>
