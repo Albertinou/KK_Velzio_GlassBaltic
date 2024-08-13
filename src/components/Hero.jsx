@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <>
       <section className="relative bg-cover bg-center bg-no-repeat">
-        <img src="./IMG_0133.jpeg" alt="hero banner" />
+        <img src="./KK Velzio banner.png" alt="hero banner" />
         <div className='absolute top-[8%] left-[5%] md:left-[37%] max-w-xs lg:max-w-2xl w-full'>
           <div className='flex justify-between'>
             <div>
